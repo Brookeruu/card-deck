@@ -6,6 +6,15 @@ $(function(){
     var suits = ["Hearts","Spades","Clubs","Diamonds",]
     var output = []
 
+    // this will return the list in order by suit
+    suits.forEach(function(suit){
+      numbers.forEach(function(number){
+        output.push(number + " of " + suit);
+        $(".card-list").append("<li>" + number + " of " + suit + "</li>");
+      });
+    });
+  });
+});
 // this will return the list in order by numbers
 
 //     numbers.forEach(function(number){
@@ -17,15 +26,6 @@ $(function(){
 //   });
 // });
 
-// this will return the list in order by suit
-    suits.forEach(function(suit){
-      numbers.forEach(function(number){
-        output.push(number + " of " + suit);
-        $(".card-list").append("<li>" + number + " of " + suit + "</li>");
-      });
-    });
-  });
-});
 
 
 
